@@ -27,7 +27,7 @@ const today = (() => {
 const clone = doc => JSON.parse(JSON.stringify(doc))
 
 function useTheme() {
-  const [theme, setTheme] = useState(() => localStorage.getItem('theme') ?? 'dark')
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') ?? 'light')
   useEffect(() => {
     document.documentElement.dataset.theme = theme
     localStorage.setItem('theme', theme)

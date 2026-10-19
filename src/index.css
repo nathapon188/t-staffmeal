@@ -1,32 +1,37 @@
+/* Palette follows westsideprivate.com.au: brand green #62a744 / #85ce65,
+   slate #445465, deep green #165e31, navy #174b81, light grey #eef1f4. */
 :root {
-  --bg:         #0c0c0d;
-  --card:       #171718;
-  --card-2:     #1e1e20;
-  --border:     #2a2a2d;
-  --text:       #e9e7e4;
-  --muted:      #9b9894;
-  --faint:      #6a6764;
-  --accent:     #e8846b;
-  --accent-dim: #3a2320;
-  --blue:       #7aa7e8;
+  --bg:         #18202a;
+  --card:       #212b36;
+  --card-2:     #28343f;
+  --border:     #354350;
+  --text:       #eef1f4;
+  --muted:      #a7b3bf;
+  --faint:      #7a8794;
+  --accent:     #85ce65;
+  --accent-dim: #24391f;
+  --on-accent:  #10200b;
+  --blue:       #7fb3e6;
   --danger:     #e07a6b;
-  --ok:         #6bbf8a;
+  --ok:         #85ce65;
   --radius:     14px;
 }
 
 html[data-theme='light'] {
-  --bg:         #f4f2ef;
+  --bg:         #eef1f4;
   --card:       #ffffff;
-  --card-2:     #f7f5f2;
-  --border:     #e2ded8;
-  --text:       #1c1b1a;
-  --muted:      #6b6763;
-  --faint:      #9b9894;
-  --accent:     #c25a3d;
-  --accent-dim: #f7e6e0;
-  --blue:       #3f6bb0;
+  --card-2:     #f6f8f9;
+  --border:     #dce2e8;
+  --text:       #445465;
+  --muted:      #66768a;
+  --faint:      #98a4b1;
+  /* Brand #62a744 deepened so green text stays readable on white. */
+  --accent:     #387d26;
+  --accent-dim: #e7f3e1;
+  --on-accent:  #ffffff;
+  --blue:       #174b81;
   --danger:     #b23c28;
-  --ok:         #3f8b5d;
+  --ok:         #165e31;
 }
 
 * { box-sizing: border-box; }
@@ -41,7 +46,7 @@ body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  font: 15px/1.5 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font: 15px/1.5 'Avenir Next', Avenir, 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 button, label, input[type='checkbox'] { touch-action: manipulation; }
@@ -280,7 +285,9 @@ tfoot td:first-child { color: var(--muted); font-weight: 500; }
 }
 .btn:hover { border-color: var(--accent); color: var(--accent); }
 .btn:disabled { opacity: .45; cursor: not-allowed; border-color: var(--border); color: var(--muted); }
-.btn-primary { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+/* Solid green like the site's call-to-action buttons. */
+.btn-primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-weight: 600; }
+.btn-primary:hover { background: var(--accent); color: var(--on-accent); filter: brightness(1.08); }
 .btn-danger { color: var(--danger); }
 .btn-danger:hover { border-color: var(--danger); color: var(--danger); }
 
