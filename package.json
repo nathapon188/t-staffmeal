@@ -1,0 +1,23 @@
+{
+  "name": "t-westside-staff",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Westside staff meal order display with calendar and per-restaurant breakdown",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "dev:netlify": "netlify dev"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^10.7.13",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tesseract.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.11"
+  }
+}
